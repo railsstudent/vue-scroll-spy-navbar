@@ -1,5 +1,5 @@
 <template>
-  <div id="app" data-spy="scroll">
+  <div id="app">
     <ScrollSpy />
   </div>
 </template>
@@ -18,5 +18,7 @@ export default {
 <style>
 body {
   padding-top: 3.25rem;
+  //height: 120vh;
+  bottom: -20px;
 }
 </style>
