@@ -91,20 +91,17 @@ export default {
   methods: {
     handleScroll() {
       const els = document.querySelectorAll("div.block");
-      //console.log(els.length);
       els.forEach((el, i) => {
         const elTop = el.getBoundingClientRect().top;
         const elBottom = el.getBoundingClientRect().bottom;
-        if (elTop <= 0 && elBottom >= 0) {
-          //          this.selected[i] = true;
+        if (elTop <= 60 && elBottom >= 0) {
           this.selected.splice(i, 1, true);
         }
-        if (elTop >= 0 || elBottom <= 0) {
-          //          this.selected[i] = false;
+        if (elTop >= 60 || elBottom <= 0) {
           this.selected.splice(i, 1, false);
         }
+        console.log(i, elTop, elBottom);
       });
-      console.log(this.selected);
     }
   },
   created: function() {

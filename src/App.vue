@@ -18,7 +18,5 @@ export default {
 <style>
 body {
   padding-top: 3.25rem;
-  //height: 120vh;
-  bottom: -20px;
 }
 </style>
