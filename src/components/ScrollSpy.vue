@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="content-container">
     <nav class="navbar is-info is-fixed-top">
       <div class="container">
         <div class="navbar-menu">
@@ -80,6 +80,7 @@
 </template>
 
 <script>
+var $ = window.jQuery;
 export default {
   name: "ScrollSpy",
   props: {},
@@ -104,7 +105,12 @@ export default {
       });
     }
   },
+  mounted: function() {
+    console.log("mounted");
+    $(".last").offset({ bottom: "300px" });
+  },
   created: function() {
+    console.log("created");
     window.addEventListener("scroll", this.handleScroll);
   },
   destroyed: function() {
@@ -117,5 +123,9 @@ export default {
 <style scoped>
 .menuSelected {
   background: #0000ff;
+}
+
+#content-container {
+  margin-bottom: 120px;
 }
 </style>
